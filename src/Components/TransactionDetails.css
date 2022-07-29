@@ -1,0 +1,10 @@
+article{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.showNavigation{
+  display: grid;
+  grid-template-columns: 0.5fr auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}

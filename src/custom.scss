@@ -1,0 +1,31 @@
+// Override default variables before the import
+$body-bg: rgb(76, 71, 71);
+$body-color: rgb(194, 67, 67);
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136
+);
+
+body {
+    font: 1rem/1.5 var(--font-family-sans-serif);
+  }
+  a {
+    color: var(--blue);
+  }
+  
+  .navbar{
+    background-color: #e6a8dc
+  }
+  .btn {
+   
+        border-radius:10px;
+        outline:none;
+        
+  }
+  body {
+    padding-top: 50px;
+    
+    }
+  
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
