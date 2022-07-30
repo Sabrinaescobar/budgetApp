@@ -17,4 +17,4 @@ function Transaction({ transaction, index }) {
   );
 }
 
-export default Transaction; 
+export default Transaction;

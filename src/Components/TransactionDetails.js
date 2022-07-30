@@ -6,16 +6,16 @@ import axios from "axios";
 const API = process.env.REACT_APP_API_URL;
 
 function TransactionDetails() {
+  const navigate = useNavigate();
   const [transaction, setTransaction] = useState({});
   let { index } = useParams();
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     axios
       .get(`${API}/transactions/${index}`)
       .then((response) => setTransaction(response.data))
       .catch((error) => navigate(`/404`));
+       // eslint-disable-next-line
   }, [index]);
 
   const handleDelete = () => {
@@ -26,38 +26,46 @@ function TransactionDetails() {
   };
 
   return (
-    <article className=" container container-fluid">
+    <article className="container container-fluid">
       <h5>
-      <strong>Date: </strong>{transaction.date}
+        <strong>Date: </strong>
+        {transaction.date}
       </h5>
       <h5>
-      <strong>Name: </strong>{transaction.itemName}
+        <strong>Name: </strong>
+        {transaction.itemName}
       </h5>
       <h5>
-      <strong>Amount: </strong>{transaction.amount}
-        <br/> 
+        <strong>Amount: </strong>
+        {transaction.amount}
+        <br />
       </h5>
       <h5>
-      <strong>From: </strong>{transaction.from}
+        <strong>From: </strong>
+        {transaction.from}
       </h5>
       <h5>
-      <strong>Category: </strong>{transaction.category}</h5>
+        <strong>Category: </strong>
+        {transaction.category}
+      </h5>
       <div className="row">
-        <div >
+        <div>
           {" "}
           <Link to={`/transactions`}>
             <button className="btn btn-secondary">Back</button>
           </Link>
         </div>
-        <div >
+        <div>
           {" "}
           <Link className="btn-light" to={`/transactions/${index}/edit`}>
             <button className="btn btn-primary">Edit</button>
           </Link>
         </div>
-        <div >
+        <div>
           {" "}
-          <button className="btn btn-danger " onClick={handleDelete}>Delete</button>
+          <button className="btn btn-danger " onClick={handleDelete}>
+            Delete
+          </button>
         </div>
       </div>
     </article>
@@ -65,3 +73,4 @@ function TransactionDetails() {
 }
 
 export default TransactionDetails;
+

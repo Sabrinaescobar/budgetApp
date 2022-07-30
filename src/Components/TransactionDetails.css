@@ -1,10 +1,11 @@
-article{
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+article {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.showNavigation{
+.showNavigation {
   display: grid;
   grid-template-columns: 0.5fr auto auto;
-  background-color: #2196F3;
+  background-color: #2196f3;
   padding: 10px;
 }
